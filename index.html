@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.container{
+	padding:10px;
+	margin:10px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	
+	var programming = {
+    airlineName: ["american", "United", "frontier","Spirit","Alaska"],
+	airlineCode: ["AA", "UA", "NK","SP","AS"],
+	price: ["103K", "109H", "456G","F321","887N"],
+	departTime: ["10:11a", "11:15a", "08:10a","05:45p","06:10p"],
+	reachedTime: ["11:11a", "08:15a", "04:10a","02:45p","03:10p"]
+};
+    
+    var SetFunction = setInterval(function() {
+        var i = Math.round((Math.random()) * programming.airlineName.length);
+        if (i == programming.airlineName.length) --i;
+        $(".airlineName").html(programming.airlineName[i]);
+		$(".airline__logo").attr("src",""+programming.airlineCode[i]+".jpg");
+        $(".Price").html(programming.price[i]);
+        $(".departTime").html(programming.departTime[i]);
+        $(".returnTime").html(programming.reachedTime[i]);
+		
+    }, 100);
+	
+	var t = setTimeout(function(){
+		clearInterval(SetFunction);
+		clearTimeout(t);
+}, 10000);
+	
+
+</script>
+</head>
+<body>
+<div class="container"> one
+<div><img src="" class="airline__logo" alt="American Airlines" title="American Airlines" width="50px;" height="50px;"></div>
+<div>Airline Name : <span class="airlineName"></Span></div>
+<div class="departTime"></div>
+<div class="returnTime"></div>
+<div class="Price"></div>
+</div>
+
+<div class="container"> Two
+<div><img src="" class="airline__logo" alt="American Airlines" title="American Airlines" width="50px;" height="50px;"></div>
+<div>Airline Name : <span class="airlineName"></Span></div>
+<div class="departTime"></div>
+<div class="returnTime"></div>
+<div class="Price"></div>
+</div>
+
+<div class="container"> Three
+<div><img src="" class="airline__logo" alt="American Airlines" title="American Airlines" width="50px;" height="50px;"></div>
+<div>Airline Name : <span class="airlineName"></Span></div>
+<div class="departTime"></div>
+<div class="returnTime"></div>
+<div class="Price"></div>
+</div>
+
+<div class="container"> Four
+<div><img src="" class="airline__logo" alt="American Airlines" title="American Airlines" width="50px;" height="50px;"></div>
+<div>Airline Name : <span class="airlineName"></Span></div>
+<div class="departTime"></div>
+<div class="returnTime"></div>
+<div class="Price"></div>
+</div>
+
+<div class="container">Fifth
+<div><img src="" class="airline__logo" alt="American Airlines" title="American Airlines" width="50px;" height="50px;"></div>
+<div>Airline Name : <span class="airlineName"></Span></div>
+<div class="departTime"></div>
+<div class="returnTime"></div>
+<div class="Price"></div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
